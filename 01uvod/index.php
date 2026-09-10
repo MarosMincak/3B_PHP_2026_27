@@ -22,8 +22,12 @@
   <?php 
   echo "<p> tento kod je vnutro php </p> ";
 
+  echo "dalsie echo";
+
   print("aj toto je moj vypis pomocou funkcie print");
   ?>
+
+
 
   
 </body>
