@@ -48,14 +48,36 @@ V Jazyku PHP sa pole definuje pomocou funkcie array()
     $kartaK = 'K';
     $kartaA = 'A';
 
+    $farba1 = "";
+    $farba2 = "";
+
+    $hodnotaKariet = 0;
+
     $znaky = array('♠','♥', '♣', '♦');
 
     for($i = 1; $i <= 6; $i++){
       $prvaKarta = rand(2, 14);
       $druhaKarta = rand(2, 14);
 
+      if($hodnotaKariet < $prvaKarta + $druhaKarta){
+        $hodnotaKariet = $prvaKarta + $druhaKarta;
+        echo $hodnotaKariet;
+      }
+
       $nahodnyZnak1 = rand(0, 3);
       $nahodnyZnak2 = rand(0, 3);
+
+      if($nahodnyZnak1 == 1 || $nahodnyZnak1 == 3){
+        $farba1 = "red";
+      }else{
+        $farba1 = "black";
+      }
+
+      if($nahodnyZnak2 == 1 || $nahodnyZnak2 == 3){
+        $farba2 = "red";
+      }else{
+        $farba2 = "black";
+      }
 
       if($prvaKarta == 11){
         $prvaKarta = $kartaJ;
@@ -75,10 +97,14 @@ V Jazyku PHP sa pole definuje pomocou funkcie array()
       }elseif($druhaKarta == 14){
         $druhaKarta = $kartaA;
       }
-      echo "Hráč $i. " . "{$prvaKarta}{$znaky[$nahodnyZnak1]} {$druhaKarta}{$znaky[$nahodnyZnak2]}" . "</br>";
+      echo "Hráč $i. " . "
+      <span style = 'color: $farba1;'>{$prvaKarta}{$znaky[$nahodnyZnak1]}</span> 
+      <span style = 'color: $farba2;'>{$druhaKarta}{$znaky[$nahodnyZnak2]}</span>" . "</br>";
+      // natavte výšku písma pre tie karty,
+      // ktoré majú najvyšiu hodnotu 
+      // PRO: šancu na výhru. 
     }
 ?>
-  
 </body>
 </html>
 
