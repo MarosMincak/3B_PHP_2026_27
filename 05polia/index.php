@@ -25,6 +25,8 @@ Napríklad $ovocie["pomaranč", "mandarinka", "slivka"]
 Pole $ovocie obsahuje 3 hodnoty.
 Index hodnoty pomaranč je 0.
 
+V Jazyku PHP sa pole definuje pomocou funkcie array()
+
 */
 
 
@@ -46,9 +48,14 @@ Index hodnoty pomaranč je 0.
     $kartaK = 'K';
     $kartaA = 'A';
 
+    $znaky = array('♠','♥', '♣', '♦');
+
     for($i = 1; $i <= 6; $i++){
       $prvaKarta = rand(2, 14);
       $druhaKarta = rand(2, 14);
+
+      $nahodnyZnak1 = rand(0, 3);
+      $nahodnyZnak2 = rand(0, 3);
 
       if($prvaKarta == 11){
         $prvaKarta = $kartaJ;
@@ -68,7 +75,7 @@ Index hodnoty pomaranč je 0.
       }elseif($druhaKarta == 14){
         $druhaKarta = $kartaA;
       }
-      echo "Hráč $i. " . "{$prvaKarta} {$druhaKarta}" . "</br>";
+      echo "Hráč $i. " . "{$prvaKarta}{$znaky[$nahodnyZnak1]} {$druhaKarta}{$znaky[$nahodnyZnak2]}" . "</br>";
     }
 ?>
   
