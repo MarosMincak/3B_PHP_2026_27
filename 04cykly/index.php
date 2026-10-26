@@ -62,11 +62,39 @@
 
     4 znaky - ♠ (čierna), ♥ (červená), ♣ (čierna), ♦ (červená)
     */
+    $prvaKarta = 0;
+    $druhaKarta = 0;
+    $kartaJ = 'J'; // "Toto je string" 'J' (znak)
+    $kartaQ = 'Q';
+    $kartaK = 'K';
+    $kartaA = 'A';
+
     for($i = 1; $i <= 6; $i++){
-      echo "Hráč $i: " . "</br>";
+      $prvaKarta = rand(2, 14);
+      $druhaKarta = rand(2, 14);
+
+      if($prvaKarta == 11){
+        $prvaKarta = $kartaJ;
+      }elseif($prvaKarta == 12){
+        $prvaKarta = $kartaQ;
+      }elseif($prvaKarta == 13){
+        $prvaKarta = $kartaK;
+      }elseif($prvaKarta == 14){
+        $prvaKarta = $kartaA;
+      }
+      if($druhaKarta == 11){
+        $druhaKarta = $kartaJ;
+      }elseif($druhaKarta == 12){
+        $druhaKarta = $kartaQ;
+      }elseif($druhaKarta == 13){
+        $druhaKarta = $kartaK;
+      }elseif($druhaKarta == 14){
+        $druhaKarta = $kartaA;
+      }
+      echo "Hráč $i. " . "{$prvaKarta} {$druhaKarta}" . "</br>";
     }
 
-
+    // Pokračovanie v 05polia-index.php
   ?>
 
 
