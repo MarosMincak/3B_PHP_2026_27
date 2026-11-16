@@ -35,6 +35,20 @@
   Napr. vygenerované [0,1,1,0,1,0,1,0,0,0] 
   Výsledok: [•(R), •(G),•(G), •(R), ...]
   */
+
+  // ÚLOHA 4 (Trošku hard)
+  /*
+  Načítajte 4 čísla do poľa o 0 do 10. 
+  Načítajte číslo premennej target (súčet možných čísel v poli)
+  Vo výstupe by ste mali nájsť tú Nticu čísel, 
+  ktorá vám tvorí hodnotu premennej target.
+
+  Vstup: nums = [2,7,11,15], target = 9
+  Výstup: [0,1]
+
+  Vstup: nums = [3,2,4], target = 6
+  Výstup: [1,2]
+  */
   
   ?>
 </body>
