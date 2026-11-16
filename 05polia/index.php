@@ -63,6 +63,7 @@ V Jazyku PHP sa pole definuje pomocou funkcie array()
         $hodnotaKariet = $prvaKarta + $druhaKarta;
         echo $hodnotaKariet;
       }
+      // DOKONČIŤ
 
       $nahodnyZnak1 = rand(0, 3);
       $nahodnyZnak2 = rand(0, 3);
@@ -100,6 +101,8 @@ V Jazyku PHP sa pole definuje pomocou funkcie array()
       echo "Hráč $i. " . "
       <span style = 'color: $farba1;'>{$prvaKarta}{$znaky[$nahodnyZnak1]}</span> 
       <span style = 'color: $farba2;'>{$druhaKarta}{$znaky[$nahodnyZnak2]}</span>" . "</br>";
+      
+      // Dobrovoľná domáca úloha :)
       // natavte výšku písma pre tie karty,
       // ktoré majú najvyšiu hodnotu 
       // PRO: šancu na výhru. 
